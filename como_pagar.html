@@ -12,20 +12,24 @@
 <body style="background-color: #d5e5fe; 
     background-image: linear-gradient(135deg, #d5e5fe 0%, #c5cff3 100%);">
 
-    <main >
+    <main>
         
         <div style="margin-top: 4px; text-align: center;">
             <h1>Checkout experience</h1>
         </div>
 
-        <div class="container rounded-3 clearfix" style="background-color: rgba(255, 255, 255, 1); text-align: center;">
+        <div class="container rounded-3 sticky-top" style="background-color: rgba(255, 255, 255, 1); text-align: center;">
             <div class="pt-5 mt-5">
                 <h1>Comece hoje mesmo!</h1>
                 <p>Escolha um plano e comece a criar seus projetos.</p>
             </div>
 
-            <div class="d-flex justify-content-evenly my-1 mx-auto p-sm-5">
-                <div class="card border-3 rounded-3" style="width: 18rem;">
+            <div class="flex-row justify-content-evenly my-1 mx-auto px-sm-5 ">
+
+                <div id="card-horizontal" 
+                    class="card flex-row rounded-3 align-items-center justify-content-evenly" 
+                    style="width: auto; height: auto;">
+
                     <div class="d-flex">
                         <div class="d-box">
                             <img src="https://via.placeholder.com/92x92" class="img-thumbnail" alt="Plano #1">
@@ -39,32 +43,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <div class="card-body">
-                            <h6>Incluido no plano:</h6>
-                            <ul>
-                                <li>Motivo 1</li>   
-                                <li>Motivo 2</li>
-                                <li>Motivo 3</li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div class="mx-auto py-2">
-                        <a href="#" class="btn btn-primary">Assine!</a>
+                        <a href="/layout.html" class="btn btn-primary">Mudar Plano</a>
                     </div>
                 </div>
-    
-                <div id="payment-status-bar" class="row">
+
+                <div id="payment-status-bar" class="row gy-0 gx-1 m-0 mt-3 w-100 justify-content-around">
                     <div class="col-6">
-                        <h6>Escolha o método de pagamento</h6>
+                        <p><span class="badge bg-primary">.</span>  Método de pagamento</p>
                     </div>
                     <div class="col-6">
-                        <h6>Detalhes do pagamento</h6>
+                        <p><span class="badge bg-secondary">.</span>    Detalhes do pagamento</p>
                     </div>
+                </div>
+
+                <div id="seletor-pagamento" class="row row-cols-2 m-3" >
+                    <button type="button" class="btn btn-outline-primary p-4 col">Crédito</button>
+                    <button type="button" class="btn btn-outline-primary p-4 col">Débito</button>
+                    <button type="button" class="btn btn-outline-primary p-4 col disabled">PIX</button>
+                    <button type="button" class="btn btn-outline-primary p-4 col disabled">Bitcoin</button>
                 </div>
             </div>
 
-            <div class="mb-0 mt-auto mx-auto">
+            <div class="mb-0 mt-5 mx-auto">
                 <h6>Você precisa de mais informações sobre os nossos planos?</h6>
                 <a href="#">Contate-nos!</a>
             </div>
