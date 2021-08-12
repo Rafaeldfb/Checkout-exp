@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    Bootstrap v5 e CSS stylesheet CDN   -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body style="background-color: #d5e5fe; 
+    background-image: linear-gradient(135deg, #d5e5fe 0%, #c5cff3 100%);">
+
+    <main>
+        
+        <div style="margin-top: 4px; text-align: center;">
+            <h1>Checkout experience</h1>
+        </div>
+
+        <div class="container rounded-3 sticky-top pb-5 bg-light" style="text-align: center;">
+            <div class="pt-5 mt-5 mb-5">
+                <h3>Comece hoje mesmo!</h3>
+                <p>Escolha um plano e comece a criar seus projetos.</p>
+            </div>
+
+            <div class="flex-row justify-content-evenly my-1 mx-auto px-sm-5 ">
+
+                <div id="card-horizontal" 
+                    class="card flex-row rounded-3 align-items-center justify-content-evenly" 
+                    style="width: auto; height: auto;">
+
+                    <div class="d-flex">
+                        <div class="d-box">
+                            <img src="https://via.placeholder.com/92x92" class="img-thumbnail" alt="Plano #1">
+                        </div>
+                        <div>
+                            <div class="d-box px-4">
+                                <h3>Plano A</h3>
+                            </div>
+                            <div class="d-box px-4">
+                                <h6><b>0,00</b><br>   / Mês</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mx-auto py-2">
+                        <a href="/layout.html" class="btn btn-primary">Mudar Plano</a>
+                    </div>
+                </div>
+
+                <div id="payment-status-bar" class="row gy-0 gx-1 m-0 mt-3 w-100 justify-content-around">
+                    <div class="col-6">
+                        <p><span class="badge bg-success">.</span>  Método de pagamento</p>
+                    </div>
+                    <div class="col-6">
+                        <p><span class="badge bg-primary">.</span>    Detalhes do pagamento</p>
+                    </div>
+                </div>
+
+                <div  class="mb-3 mt-5" >
+                    <form method="POST" id="cred-form" class="row">
+                        <label for="numero_cc" class="control-label mb-3 col-12 text-start" aria-label="numero_cc" ><b>Dados do Cartão</b></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control-lg col-sm-6" name="numero_cc" id="numero_cc" placeholder="Número do Cartão" required>
+                            <input type="month" class="form-control-sm col-sm-4" name="vencimento_cc" id="vencimento_cc" placeholder="MM/YY" required>
+                            <input type="text" class="form-control-sm col-sm-2" name="codigo_cc" id="codigo_cc" placeholder="CVC" required>
+                        </div>
+                        <span class="mb-5"></span>
+                        <div class="input-group justify-content-between mb-3">
+                            <div class="col-sm-5 d-box mb-3 mw-50">
+                                <label for="nome" class="control-label  w-100 mb-3 text-start"><b>Nome completo</b></label>
+                                <input type="text" class="form-control-lg w-100 rounded-start" name="nome" id="nome" placeholder="Nome completo" required>
+                            </div>
+                            <div class="col-sm-5 d-box mb-3 mw-50">
+                                <label for="email" class="control-label  w-100 mb-3 text-start"><b>Email</b></label>
+                                <input type="email" class="form-control-lg w-100 rounded-start" name="email" id="email" placeholder="seu@email.com.br" required>
+                            </div>
+                        </div>
+                        <span class="mb-5"></span>
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-primary">Por R&#x24; 0,00</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

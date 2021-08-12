@@ -19,70 +19,16 @@
         </div>
 
         <div class="container rounded-3 clearfix" style="background-color: rgba(255, 255, 255, 1); text-align: center;">
-            <div class="pt-5 mt-5">
-                <h1>Comece hoje mesmo!</h1>
+            <div class="pt-5 mt-5 mb-5">
+                <h3>Comece hoje mesmo!</h3>
                 <p>Escolha um plano e comece a criar seus projetos.</p>
             </div>
-            <div class="d-flex justify-content-evenly my-1 mx-auto p-sm-5">
-                <div class="card border-3 rounded-3" style="width: 18rem;">
-                    <div class="d-flex">
-                        <div class="d-box">
-                            <img src="https://via.placeholder.com/92x92" class="img-thumbnail" alt="Plano #1">
-                        </div>
-                        <div>
-                            <div class="d-box px-4">
-                                <h3>Plano A</h3>
-                            </div>
-                            <div class="d-box px-4">
-                                <h6><b>0,00</b><br>   / Mês</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-body">
-                            <h6>Incluido no plano:</h6>
-                            <ul>
-                                <li>Motivo 1</li>   
-                                <li>Motivo 2</li>
-                                <li>Motivo 3</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mx-auto py-2">
-                        <a href="/como_pagar.html" class="btn btn-primary">Assine!</a>
-                    </div>
-                </div>
-    
-                <div class="card border-3 rounded-3" style="width: 18rem;">
-                    <div class="d-flex">
-                        <div class="d-box">
-                            <img src="https://via.placeholder.com/92x92" class="img-thumbnail" alt="Plano #1">
-                        </div>
-                        <div>
-                            <div class="d-box px-4">
-                                <h3>Plano A</h3>
-                            </div>
-                            <div class="d-box px-4">
-                                <h6><b>0,00</b><br>   / Mês</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-body">
-                            <h6>Incluido no plano:</h6>
-                            <ul>
-                                <li>Motivo 1</li>   
-                                <li>Motivo 2</li>
-                                <li>Motivo 3</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mx-auto py-2">
-                        <a href="#" class="btn btn-primary">Assine!</a>
-                    </div>
-                </div>
-            </div>
 
+            <div style="width:100%; height:500px;">
+                {% block content %}
+                {% endblock %}
+            </div>
+            
             <div class="mb-0 mt-auto mx-auto">
                 <h6>Você precisa de mais informações sobre os nossos planos?</h6>
                 <a href="#">Contate-nos!</a>

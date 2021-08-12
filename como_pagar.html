@@ -18,58 +18,54 @@
             <h1>Checkout experience</h1>
         </div>
 
-        <div class="container rounded-3 sticky-top" style="background-color: rgba(255, 255, 255, 1); text-align: center;">
-            <div class="pt-5 mt-5">
-                <h1>Comece hoje mesmo!</h1>
+        <div class="container rounded-3 sticky-top pb-5 bg-light" style="text-align: center;">
+            <div class="pt-5 mt-5 mb-5">
+                <h3>Comece hoje mesmo!</h3>
                 <p>Escolha um plano e comece a criar seus projetos.</p>
             </div>
 
             <div class="flex-row justify-content-evenly my-1 mx-auto px-sm-5 ">
 
                 <div id="card-horizontal" 
-                    class="card flex-row rounded-3 align-items-center justify-content-evenly" 
+                    class="card flex-row rounded-3 m-3 align-items-center justify-content-evenly" 
                     style="width: auto; height: auto;">
 
                     <div class="d-flex">
                         <div class="d-box">
-                            <img src="https://via.placeholder.com/92x92" class="img-thumbnail" alt="Plano #1">
+                            <img src="https://via.placeholder.com/92x92" class="img-thumbnail" alt="Plano A">
                         </div>
                         <div>
                             <div class="d-box px-4">
-                                <h3>Plano A</h3>
+                                <h6>Plano A</h6>
                             </div>
                             <div class="d-box px-4">
-                                <h6><b>0,00</b><br>   / Mês</h6>
+                                <h6><b>R&#x24; 0,00</b><br>   / Mês</h6>
                             </div>
                         </div>
                     </div>
                     
                     <div class="mx-auto py-2">
-                        <a href="/layout.html" class="btn btn-primary">Mudar Plano</a>
+                        <a href="/index.html" class="btn btn-primary">Mudar Plano</a>
                     </div>
                 </div>
-
-                <div id="payment-status-bar" class="row gy-0 gx-1 m-0 mt-3 w-100 justify-content-around">
-                    <div class="col-6">
+<!-- class="flex-row gy-0 gx-1 m-3 mt-3 w-100 justify-content-around" -->
+                <div id="payment-status-bar" class="row gy-0 gx-1 m-3 mt-3">
+                    <div class="col-sm-6 d-flex">
                         <p><span class="badge bg-primary">.</span>  Método de pagamento</p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6 d-flex">
                         <p><span class="badge bg-secondary">.</span>    Detalhes do pagamento</p>
                     </div>
                 </div>
 
                 <div id="seletor-pagamento" class="row row-cols-2 m-3" >
-                    <button type="button" class="btn btn-outline-primary p-4 col">Crédito</button>
-                    <button type="button" class="btn btn-outline-primary p-4 col">Débito</button>
-                    <button type="button" class="btn btn-outline-primary p-4 col disabled">PIX</button>
-                    <button type="button" class="btn btn-outline-primary p-4 col disabled">Bitcoin</button>
+                    <a role="button" href="/detatalhes_pagamento.html" class="btn btn-outline-primary p-4 col">Crédito</a>
+                    <a role="button" href="/detatalhes_pagamento.html"class="btn btn-outline-primary p-4 col">Débito</a>
+                    <a role="button" class="btn btn-outline-primary p-4 col disabled">PIX</a>
+                    <a role="button" class="btn btn-outline-primary p-4 col disabled">Bitcoin</a>
                 </div>
             </div>
-
-            <div class="mb-0 mt-5 mx-auto">
-                <h6>Você precisa de mais informações sobre os nossos planos?</h6>
-                <a href="#">Contate-nos!</a>
-            </div>
+            
         </div>
     </main>
 
