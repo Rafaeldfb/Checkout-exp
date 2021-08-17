@@ -1,17 +1,8 @@
+
 body {
     background-color: #bccfed; 
     background-image: linear-gradient(43deg, #bccfed 0%, #ebf1f5 69%, #bccfed 85%);
-}
-.card {
-    border-radius: 1rem;
-    width: 20rem;
-    height:auto
-}
-.card:hover {
-    color: #fff;
-    background-color: #0d6efd;
-    background-image: linear-gradient(43deg, #0d6efd 0%, #0d6efd 58%, #87baff 100%);
-
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #main-container {
@@ -26,4 +17,78 @@ body {
     border: 1px solid #ffffffab;
     background-color: #0d6efd;
     background-image: linear-gradient(43deg, #0d6efd 0%, #0d6efd 58%, #87baff 100%);
+}
+.blocks-out {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.block-transition {
+    display: block;
+    animation-name: blocks-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes blocks-in {
+    0% {
+        opacity: 0.1;
+        transform: translateX(-20px);        
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        display: contents;
+    }
+}
+
+.card {
+    border-radius: 1rem;
+    width: 20rem;
+    height:auto
+}
+.card:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    background-image: linear-gradient(43deg, #0d6efd 0%, #0d6efd 58%, #87baff 100%);
+
+}
+
+/*animação de transição do cartão após ser escolhido*/
+.card-transition {
+    animation-name: card-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+}
+@keyframes card-in {
+    0% {
+        background-color: #0d6efd;width: 40px;
+        height: 40px;
+        color: transparent;
+        transform: translateX(20px);
+        
+    }
+    50% {
+        background-color: #0d6efd;
+        width: 100%;
+        color: transparent;
+        transform: translateY(-10px);
+    }
+    100% {
+        color: #fff;
+        background-color: #0d6efd;
+        background-image: linear-gradient(43deg, #0d6efd 0%, #0d6efd 58%, #87baff 100%);
+        box-shadow: 0px 20px 30px rgba(48, 48, 48, 0.50);width: 100%;
+        border-radius: 1rem;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        border: transparent;
+        align-items: center;
+        justify-content: space-evenly;
+        display: flexbox;
+    }
 }

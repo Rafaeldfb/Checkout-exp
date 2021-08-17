@@ -7,6 +7,10 @@
     <!--    Bootstrap v5 e CSS stylesheet CDN   -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <!-- google fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
 
     <title>checkout</title>
 </head>
@@ -23,11 +27,175 @@
                 <p>Escolha um plano e comece a criar seus projetos.</p>
             </div>
 
-            <div style="width:100%; height:500px;">
-                {% block content %}
-                {% endblock %}
+            <div id="card-container" class="d-md-flex justify-content-center py-3 mx-auto">
+                <div id="card-iniciante" class="card m-2 pb-3 shadow-sm">
+                    <div class="d-inline-flex pt-3 mx-3 align-items-center">
+                        <div class="d-box">
+                            <img src="/img/iniciante.png" class="img-thumbnail" alt="Plano #1">
+                        </div>
+                        <div class="d-block m-3">
+                            <h6><b>Iniciante</b></h6>
+                            <div class="d-inline-flex align-content-center">
+                                <p>R&#x24;<span class="display-6"> 0 </span>/Mês</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body m-0">
+                        <div class="d-inline m-0 p-0 fw-bold text-start">
+                            <p>Vantagens incluidas:</p>
+                        </div>
+                        <div class="d-grid gap-2 w-100">
+                            <div class="d-table-row w-100 justify-content-start align-content-center">
+                                <div class="d-table-cell me-auto col-2 h-auto">
+                                    <span class=" p-1 py-0 border border-3 rounded-3 border-primary bg-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="d-inline text-nowrap d-table-cell col-9 p-0 text-start">
+                                    <span class=" d-inline fw-bold">1 TB </span><p class="d-inline">Em  Nuvem</p>
+                                </div>
+                            </div>
+                            <div class="d-table-row w-100 justify-content-start align-content-center">
+                                <div class="d-table-cell me-auto col-2 h-auto">
+                                    <span class=" p-1 py-0 border border-3 rounded-3 border-primary bg-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="d-inline text-nowrap d-table-cell col-9 p-0 text-start">
+                                    <span class=" d-inline fw-bold">2 </span><p class="d-inline">Projetos ativos</p>
+                                </div>
+                            </div>
+                            <div class="d-table-row w-100 justify-content-start align-content-center">
+                                <div class="d-table-cell me-auto col-2 h-auto">
+                                    <span class=" p-1 py-0 border border-3 rounded-3 border-primary bg-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="d-inline text-nowrap d-table-cell col-9 p-0 text-start">
+                                    <span class=" d-inline fw-bold">3 </span><p class="d-inline">Colaboradores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-inline mx-3 py-2">
+                        <!--<a href="/como_pagar.html" class="btn btn-primary w-100">Assine!</a>-->
+                        <button id="btn-iniciante" type="submit" name="plano" value="iniciante" class="btn btn-primary w-100" >Assine!</button>
+                    </div>
+                </div>
+    
+                <div id="card-profissional" class="card m-2 pb-3 shadow-sm">
+                    <div class="d-inline-flex pt-3 mx-3 align-items-center">
+                        <div class="d-box">
+                            <img src="/img/profissional.png" class="img-thumbnail" alt="Plano #1">
+                        </div>
+                        <div class="d-block m-3">
+                            <h6><b>Profissional</b></h6>
+                            <div class="d-inline-flex align-content-center">
+                                <p>R&#x24;<span class="display-6"> 24 </span>/Mês</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body m-0">
+                        <div class="d-inline m-0 p-0 fw-bold text-start">
+                            <p>Vantagens incluidas:</p>
+                        </div>
+                        <div class="d-grid gap-2 w-100">
+                            <div class="d-table-row w-100 justify-content-start align-content-center">
+                                <div class="d-table-cell me-auto col-2 h-auto">
+                                    <span class=" p-1 py-0 border border-3 rounded-3 border-primary bg-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="d-inline text-nowrap d-table-cell col-9 p-0 text-start">
+                                    <span class=" d-inline fs-3 align-text-center fw-bold">&infin; </span><p class="d-inline">Em  Nuvem</p>
+                                </div>
+                            </div>
+                            <div class="d-table-row w-100 justify-content-start align-content-center">
+                                <div class="d-table-cell me-auto col-2 h-auto">
+                                    <span class=" p-1 py-0 border border-3 rounded-3 border-primary bg-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="d-inline text-nowrap d-table-cell col-9 p-0 text-start">
+                                    <span class=" d-inline fw-bold">2 </span><p class="d-inline">Projetos ativos</p>
+                                </div>
+                            </div>
+                            <div class="d-table-row w-100 justify-content-start align-content-center">
+                                <div class="d-table-cell me-auto col-2 h-auto">
+                                    <span class=" p-1 py-0 border border-3 rounded-3 border-primary bg-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="d-inline text-nowrap d-table-cell col-9 p-0 text-start">
+                                    <span class=" d-inline fw-bold">3 </span><p class="d-inline">Colaboradores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-inline mx-3 py-2">
+                        <!--<a href="/como_pagar.html" class="btn btn-primary w-100">Assine!</a>-->
+                        <button id="btn-profissional" type="submit" name="plano" value="profissional" class="btn btn-primary w-100" >Assine!</button>
+                    </div>
+                </div>                
+            </div>
+
+            <div id="metodos" class="blocks-out">
+                <div id="status-pagamento" class="row gy-0 gx-1 m-3 mt-3">
+                    <div class="col-sm-6 d-flex">
+                        <p><span class="badge bg-primary">.</span>  Método de pagamento</p>
+                    </div>
+                    <div class="col-sm-6 d-flex">
+                        <p><span class="badge bg-secondary">.</span>    Detalhes do pagamento</p>
+                    </div>
+                </div>
+
+                <div id="seletor-pagamento" class="row row-cols-2 m-3" >
+                    <button id="btn-credito" class="btn btn-outline-primary p-4 col">Crédito</button>
+                    <button id="btn-debito" class="btn btn-outline-primary p-4 col">Débito</button>
+                    <button id="btn-pix" class="btn btn-outline-primary p-4 col disabled">PIX</button>
+                    <button id="btn-bitcoin" class="btn btn-outline-primary p-4 col disabled">Bitcoin</button>
+                </div>
             </div>
             
+            <div  id="detalhes" class="blocks-out mb-3 mt-5" >
+                <form method="POST" action="/contato.html"> id="cred-form" class="row">
+                    <label for="numero_cc" class="control-label mb-3 col-12 text-start" aria-label="numero_cc" ><b>Dados do Cartão</b></label>
+                    <div class="input-group">
+                        <input type="text" class="form-control-lg col-sm-6" name="numero_cc" id="numero_cc" placeholder="Número do Cartão" required>
+                        <input type="month" class="form-control-sm col-sm-4" name="vencimento_cc" id="vencimento_cc" placeholder="MM/YY" required>
+                        <input type="text" class="form-control-sm col-sm-2" name="codigo_cc" id="codigo_cc" placeholder="CVC" required>
+                    </div>
+                    <span class="mb-5"></span>
+                    <div class="input-group justify-content-between mb-3">
+                        <div class="col-sm-5 d-box mb-3 mw-50">
+                            <label for="nome" class="control-label  w-100 mb-3 text-start"><b>Nome completo</b></label>
+                            <input type="text" class="form-control-lg w-100 rounded-start" name="nome" id="nome" placeholder="Nome completo" required>
+                        </div>
+                        <div class="col-sm-5 d-box mb-3 mw-50">
+                            <label for="email" class="control-label  w-100 mb-3 text-start"><b>Email</b></label>
+                            <input type="email" class="form-control-lg w-100 rounded-start" name="email" id="email" placeholder="seu@email.com.br" required>
+                        </div>
+                    </div>
+                    <span class="mb-5"></span>
+                    <div class="col-12 me-3 text-end">
+                        <button type="submit" class="btn btn-primary">Por R&#x24; 0,00</button>
+                    </div>
+                    
+                </form>
+            </div>
+
             <div class="mb-3 mt-auto mx-auto">
                 <h6>Precisa de mais informações sobre os nossos planos?</h6>
                 <a href="/contato.html">Contate-nos!</a>
@@ -36,5 +204,69 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        let cardPro = document.getElementById('card-profissional');
+        let btnPro = document.getElementById('btn-profissional');
+        let cardIni = document.getElementById('card-iniciante');
+        let btnIni = document.getElementById('btn-iniciante')
+        let metodos = document.getElementById('metodos')
+        // manipulando cards - escolha profissional
+        btnPro.addEventListener('click', function () {
+            //esconde o adversário
+            cardIni.style.display = 'none';
+            // transforma o escolhido
+            cardPro.classList.remove('card');
+            cardPro.classList.add('card-transition');
+            btnPro.classList.remove('w-100');
+            //atualizando o botão do card para retornar (ver requisição post feita - "plano":"btn-value")
+            btnPro.innerHTML = 'Mudar';
+            btnPro.innerHTML = '<a role="button" href="/layout.html" class="text-white"> Mudar</a>';
+            //Esconde o card-body
+            for (let i = 0; i < document.getElementsByClassName('card-body').length; i++) {
+                document.getElementsByClassName('card-body')[i].style.display = 'none';
+            };
+
+            // chama prox bloco
+            metodos.classList.toggle('block-transition', true);
+            metodos.classList.toggle('blocks-out', true);
+        });
+        // manipulando cards - escolha iniciante
+        btnIni.addEventListener('click', function () {
+            //esconde o adversário
+            cardPro.style.display = 'none';
+            // transforma o escolhido
+            cardIni.classList.remove('card');
+            cardIni.classList.add('card-transition');
+            btnIni.classList.remove('w-100');
+            //atualizando o botão do card para retornar (ver requisição post feita - "plano":"btn-value")
+            btnIni.innerHTML = '<a role="button" href="/layout.html" class="text-white"> Mudar</a>';
+            //Esconde o card-body
+            for (let i = 0; i < document.getElementsByClassName('card-body').length; i++) {
+                document.getElementsByClassName('card-body')[i].style.display = 'none';
+            };
+
+            // chama prox bloco
+            metodos.classList.toggle('block-transition', true);
+            metodos.classList.toggle('blocks-out', true);
+        });
+        // mostrando formulário depagamento
+        let btnCred = document.getElementById('btn-credito');
+        let btnDeb = document.getElementById('btn-deb');
+        let detalhes = document.getElementById('detalhes');
+        btnCred.addEventListener('click', function () {
+            //esconde o adversário
+            metodos.style.display = 'none';
+            // chama prox bloco
+            detalhes.classList.toggle('block-transition', true);
+            detalhes.classList.toggle('blocks-out', true);
+        });
+        btnDeb.addEventListener('click', function () {
+            //esconde o adversário
+            metodos.style.display = 'none';
+            // chama prox bloco
+            detalhes.classList.toggle('block-transition', true);
+            detalhes.classList.toggle('blocks-out', true);
+        });
+    </script>
 </body>
 </html>
