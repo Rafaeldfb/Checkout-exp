@@ -152,12 +152,20 @@
             </div>
 
             <div id="metodos" class="blocks-out">
-                <div id="status-pagamento" class="row gy-0 gx-1 m-3 mt-3">
+                <div id="status-pagamento-metodos" class="row gy-0 gx-1 m-3 mt-3">
                     <div class="col-sm-6 d-flex">
-                        <p><span class="badge bg-primary">.</span>  Método de pagamento</p>
+                        <p><span class="py-0 me-3 border border-3 rounded-3 border-primary bg-light">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                            </svg>
+                        </span>  Método de pagamento</p>
                     </div>
                     <div class="col-sm-6 d-flex">
-                        <p><span class="badge bg-secondary">.</span>    Detalhes do pagamento</p>
+                        <p><span class="py-0 me-3 border border-3 rounded-3 border-secondary bg-light">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#6c757d" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                            </svg>
+                        </span>    Detalhes do pagamento</p>
                     </div>
                 </div>
 
@@ -170,6 +178,22 @@
             </div>
             
             <div  id="detalhes" class="blocks-out mb-3 mt-5" >
+                <div id="status-pagamento-detalhes" class="row gy-0 gx-1 m-3 mt-3">
+                    <div class="col-sm-6 d-flex">
+                        <p><span class="py-0 me-3 border border-3 rounded-3 border-success bg-light">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#198754" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                            </svg>
+                        </span>  Método de pagamento</p>
+                    </div>
+                    <div class="col-sm-6 d-flex">
+                        <p><span class="py-0 me-3 border border-3 rounded-3 border-primary bg-light">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" width="1rem" height="1rem" viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+                            </svg>
+                        </span>    Detalhes do pagamento</p>
+                    </div>
+                </div>
                 <form method="POST" action="/contato.html" id="cred-form" class="row">
                     <label for="numero_cc" class="control-label mb-3 col-12 text-start" aria-label="numero_cc" ><b>Dados do Cartão</b></label>
                     <div class="input-group">
@@ -190,7 +214,7 @@
                     </div>
                     <span class="mb-5"></span>
                     <div class="col-12 me-3 text-end">
-                        <button type="submit" class="btn btn-primary">Por R&#x24; 0,00</button>
+                        <button id="btn-fechar-compra" type="submit" class="btn btn-primary">Por R&#x24; 0,00</button>
                     </div>
                     
                 </form>
@@ -208,10 +232,17 @@
         let cardPro = document.getElementById('card-profissional');
         let btnPro = document.getElementById('btn-profissional');
         let cardIni = document.getElementById('card-iniciante');
-        let btnIni = document.getElementById('btn-iniciante')
-        let metodos = document.getElementById('metodos')
+        let btnIni = document.getElementById('btn-iniciante');
+        let metodos = document.getElementById('metodos');
+        var planoEscolhido = {
+            "plano": "profissional",
+            "valor": "24"
+        };
         // manipulando cards - escolha profissional
         btnPro.addEventListener('click', function () {
+            //sanvando escolhas para uso em outros elementos
+            planoEscolhido.plano = "profissional";
+            planoEscolhido.valor = "24"
             //esconde o adversário
             cardIni.style.display = 'none';
             // transforma o escolhido
@@ -220,7 +251,7 @@
             btnPro.classList.remove('w-100');
             //atualizando o botão do card para retornar (ver requisição post feita - "plano":"btn-value")
             btnPro.innerHTML = 'Mudar';
-            btnPro.innerHTML = '<a role="button" href="/layout.html" class="text-white"> Mudar</a>';
+            btnPro.innerHTML = '<a role="button" href="/index.html" class="text-white"> Mudar</a>';
             //Esconde o card-body
             for (let i = 0; i < document.getElementsByClassName('card-body').length; i++) {
                 document.getElementsByClassName('card-body')[i].style.display = 'none';
@@ -232,6 +263,9 @@
         });
         // manipulando cards - escolha iniciante
         btnIni.addEventListener('click', function () {
+            //sanvando escolhas para uso em outros elementos
+            planoEscolhido.plano = "iniciante";
+            planoEscolhido.valor = "0";
             //esconde o adversário
             cardPro.style.display = 'none';
             // transforma o escolhido
@@ -239,7 +273,7 @@
             cardIni.classList.add('card-transition');
             btnIni.classList.remove('w-100');
             //atualizando o botão do card para retornar (ver requisição post feita - "plano":"btn-value")
-            btnIni.innerHTML = '<a role="button" href="/layout.html" class="text-white"> Mudar</a>';
+            btnIni.innerHTML = '<a role="button" href="/index.html" class="text-white"> Mudar</a>';
             //Esconde o card-body
             for (let i = 0; i < document.getElementsByClassName('card-body').length; i++) {
                 document.getElementsByClassName('card-body')[i].style.display = 'none';
@@ -251,9 +285,11 @@
         });
         // mostrando formulário depagamento
         let btnCred = document.getElementById('btn-credito');
-        let btnDeb = document.getElementById('btn-deb');
+        let btnDeb = document.getElementById('btn-debito');
         let detalhes = document.getElementById('detalhes');
         btnCred.addEventListener('click', function () {
+            // Atualizar botão de compra com o valor
+            upBtnCompra();
             //esconde o adversário
             metodos.style.display = 'none';
             // chama prox bloco
@@ -261,12 +297,22 @@
             detalhes.classList.toggle('blocks-out', true);
         });
         btnDeb.addEventListener('click', function () {
+            // Atualizar botão de compra com o valor
+            upBtnCompra();
             //esconde o adversário
             metodos.style.display = 'none';
             // chama prox bloco
             detalhes.classList.toggle('block-transition', true);
             detalhes.classList.toggle('blocks-out', true);
         });
+        // Detalhes de pagamento - exibir valor no botão de fechar a compra
+        function upBtnCompra() {
+            let btnComprar = document.getElementById('btn-fechar-compra');
+            let label = "Por R&#x24; ";
+            label = label.concat(planoEscolhido.valor,",00");
+            btnComprar.innerHTML = label;
+        };
+        
     </script>
 </body>
 </html>
